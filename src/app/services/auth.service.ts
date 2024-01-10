@@ -8,26 +8,29 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  apiurl = 'http://localhost:3000/users'
 
   getAll(){
     return this.http.get(JSON_serverAPIs.userUrl);
   }
 
   getbyCode(code: any){
-    return this.http.get(JSON_serverAPIs.roleUrl+'/'+code);
+    return this.http.get(JSON_serverAPIs.userUrl+'/'+code);
   }
 
   getRegestered(inputdata : any){
-    return this.http.post(JSON_serverAPIs.roleUrl, inputdata);
+    return this.http.post(JSON_serverAPIs.userUrl, inputdata);
   }
 
   updateUser(code:any , inputdata: any){
-    return this.http.put(JSON_serverAPIs.roleUrl + '/' + code, inputdata);
+    return this.http.put(JSON_serverAPIs.userUrl + '/' + code, inputdata);
   }
 
   isLoggedin(){
     return sessionStorage.getItem('username')!=null;
+  }
+
+  getUserName(){
+    return sessionStorage.getItem('username')!=null?sessionStorage.getItem('username')?.toString():'';
   }
 
   getUserRole(){
@@ -40,11 +43,11 @@ export class AuthService {
   assignRole(userId: string, roleId: string): Observable<any> {
     // Assign role to a user
     const user = { role: roleId };
-    return this.http.patch(`${this.apiurl}/${userId}`, user);
+    return this.http.patch(`${JSON_serverAPIs.userUrl}/${userId}`, user);
   }
   changeStatus(id: string, newStatus: boolean): Observable<any> {
     // Use PATCH method to update the 'isactive' property of a user
     const user = { isactive: newStatus };
-    return this.http.patch(`${this.apiurl}/${id}`, user);
+    return this.http.patch(`${JSON_serverAPIs.userUrl}/${id}`, user);
   }
 }

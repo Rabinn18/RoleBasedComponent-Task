@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const COMPONENTS = [
   LoginComponent,
@@ -13,6 +14,7 @@ const COMPONENTS = [
 ];
 
 const MODULES = [
+  BrowserAnimationsModule,
   CommonModule,
   RouterModule,
   FormsModule,

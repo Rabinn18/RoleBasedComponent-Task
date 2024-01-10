@@ -11,10 +11,11 @@ export class SideNavComponent implements DoCheck, OnInit{
   public isadmin = false;
   public activeSegment: string = "";
   public loggedInRole = this.service.getUserRole();
+  public LoggedInUserName: string|any;
   public menuItemsList: Array<any> = [];
   constructor(
     private service:AuthService,
-    private activated: ActivatedRoute){
+  ){
       console.log(this.loggedInRole)
   }
   public home = [
@@ -39,10 +40,12 @@ export class SideNavComponent implements DoCheck, OnInit{
     }
   }
   ngOnInit(): void{
-    // this.activeSegment = this.activated.snapshot.url[0].path;
-    if(this.isadmin == true){
+    this.LoggedInUserName = sessionStorage.getItem('id')
+    if(this.service.getUserRole()==='admin'){
       this.menuItemsList.push(...this.home, ...this.employee)
-    }else if(this.service.getUserRole()==='employee'){
+    }else if(this.service.getUserRole()==='manager'){
+      this.menuItemsList.push(...this.home, ...this.employee)
+    }else{
       this.menuItemsList.push(...this.home)
     }
   }

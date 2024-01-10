@@ -2,7 +2,6 @@
   <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center">
       <div class="header-action">
-        <h1 class="page-title">Employee</h1>
         <div id="center" class="main center">
           <table
             class="table table-hover table-bordered table-vcenter text-nowrap table-striped mb-0"
@@ -15,12 +14,14 @@
                 <th class="text-center">Email</th>
                 <th class="text-center">Role</th>
                 <th class="text-center">IsActive</th>
-                <th class="text-center">Action</th>
+                <th class="text-center" *ngIf="loggedInRole === 'admin'">
+                  Action
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let data of userList; index as i">
-                <td class="text-center">{{ size * PageNumber + i + 1 }}</td>
+                <td class="text-center">{{ i + 1 }}</td>
                 <td class="text-center">{{ data?.id }}</td>
                 <td class="text-center">
                   {{ data?.name }}
@@ -42,10 +43,9 @@
                     <span class="slider round"></span>
                   </label>
                 </td>
-                <td class="text-center">
+                <td class="text-center" *ngIf="loggedInRole === 'admin'">
                   <button
                     type="button"
-                    *ngIf="data?.role != 'admin'"
                     class="btn btn-primary btn-sm mr-1"
                     (click)="openRolePopup(data)"
                     title="Assign Role"

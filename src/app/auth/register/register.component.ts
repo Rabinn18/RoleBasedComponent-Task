@@ -34,7 +34,6 @@ export class RegisterComponent {
   registrationSubmit() {
     if (this.registerForm.valid) {
       this.service.getRegestered(this.registerForm.value).subscribe(result => {
-        console.log(this.registerForm.value)
         this.toastr.success('Please contact admin for enable access.','Registered successfully')
         this.router.navigate(['login'])
       });
@@ -42,5 +41,4 @@ export class RegisterComponent {
       this.toastr.warning('Please enter valid data.')
     }
   }
-
 }

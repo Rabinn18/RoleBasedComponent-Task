@@ -1,10 +1,5 @@
 
-.main {
-  margin: 0 auto;
-  display: block;
-  height: 100%;
-  margin-top: 60px;
-}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -16,6 +11,11 @@
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+table {
+  margin-left: 25%;
+  margin-top: 100px;
 }
 
 .slider {

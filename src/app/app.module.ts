@@ -13,11 +13,10 @@ import { ToastrModule } from 'ngx-toastr';
 const Modules = [
   BrowserModule,
   AppRoutingModule,
+  BrowserAnimationsModule,
   ReactiveFormsModule,
-  FormsModule,
   HttpClientModule,
-  ToastrModule.forRoot(),
-  BrowserAnimationsModule
+  ToastrModule.forRoot()
 ]
 
 const AddModules = [

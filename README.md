@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## About Task
+
+Components are loded as per the roles of user.
+Dashboard is available to all.
+Employee route is not shown and can't be accessed by user while it can viewed by manager and admin.
+In employee component changing status of employee can be done by both manager and admin while only admin can assign & change roles of employee. Admin's status can't be changed.
+
+Components are divided into separate modules and are loded lazily when required.
+
+JSON server is used for apis. => 'json-server --watch db.json' to run server

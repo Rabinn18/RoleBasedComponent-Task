@@ -1,14 +1,29 @@
 <div class="section-body">
   <div class="container-fluid">
-    <div id="center" class="main center">
-      <div class="mainInner">
-        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
-      </div>
-      <div class="mainInner">
-        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
-      </div>
-      <div class="mainInner">
-        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    <div class="d-flex justify-content-between align-items-center">
+      <div id="center" class="main center mt-5">
+        <table
+          class="table table-hover table-bordered table-vcenter text-nowrap table-striped mb-0"
+        >
+          <thead class="thead-light">
+            <tr>
+              <th class="text-center">SN</th>
+              <th class="text-center">Product Name</th>
+              <th class="text-center">Features</th>
+              <th class="text-center">Clients</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of productList; index as i">
+              <td class="text-center">{{ i + 1 }}</td>
+              <td class="text-center">{{ data?.name }}</td>
+              <td class="text-center">
+                {{ data?.features }}
+              </td>
+              <td class="text-center">{{ data?.clients }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

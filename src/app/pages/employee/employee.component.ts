@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { UserInfo } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import Swal from 'sweetalert2';
 @Component({
@@ -12,20 +11,12 @@ import Swal from 'sweetalert2';
 })
 export class EmployeeComponent {
   public loggedInUserRoleData: string|any;
+  public loggedInRole = this.service.getUserRole();
   userList: any;
   roleList: any;
-  dataSource: any;
-  selectedRole: any;
-  // roles:any;
-  page: number = 1;
-  size: number = 10;
-  PageNumber: number = 0;
-  totalCount: number = 0;
 
   constructor(
     private service: AuthService,
-    private builder: FormBuilder,
-    private router: Router,
     private toastr: ToastrService
   ){}
 
@@ -33,15 +24,13 @@ export class EmployeeComponent {
     this.loadUser();
     this.service.getAllRoles().subscribe(res=>{
       this.roleList = res;
-      console.log(this.roleList)
     })
-    this.loggedInUserRoleData = sessionStorage.getItem('id')
-    console.log(this.loggedInUserRoleData)
+    this.loggedInUserRoleData = sessionStorage.getItem('role')
+    console.log(this.loggedInRole)
   }
   loadUser(){
     this.service.getAll().subscribe(res => {
       this.userList = res;
-      console.log(res)
     });
   }
 

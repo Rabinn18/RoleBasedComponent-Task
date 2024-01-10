@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "id": "Voluptatum asperiore",
-      "name": "Est dolorum dolore d",
-      "password": "Pa$$w0rd!",
-      "email": "dyvixosa@mailinator.com",
-      "gender": "male",
-      "role": "employee",
-      "isactive": true
-    },
-    {
       "id": "rabin18",
       "name": "Rabin Pokhrel",
       "password": "Admin@123",
@@ -17,29 +8,82 @@
       "gender": "male",
       "role": "admin",
       "isactive": true
+    },
+    {
+      "id": "imsTest",
+      "name": "IMS Private Limited",
+      "password": "Pa$$w0rd!",
+      "email": "ims@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "demoManager",
+      "name": "Manager Name",
+      "password": "Pa$$w0rd!",
+      "email": "manager@gmail.com",
+      "gender": "male",
+      "role": "manager",
+      "isactive": true
+    },
+    {
+      "id": "demoManager",
+      "name": "Manage Name",
+      "password": "Pa$$w0rd!",
+      "email": "employee@gmail.com",
+      "gender": "male",
+      "role": "employee",
+      "isactive": true
     }
   ],
   "roles": [
     {
       "code": "admin",
-      "name": "Admin"
+      "name": "Admin",
+      "id": "9dce"
     },
     {
       "code": "manager",
-      "name": "Manager"
+      "name": "Manager",
+      "id": "c77d"
     },
     {
       "code": "employee",
-      "name": "Employee"
+      "name": "Employee",
+      "id": "6ef4"
+    }
+  ],
+  "products": [
+    {
+      "name": "POS MS",
+      "features": "Inventory, Billing, Accounting",
+      "clients": "Daily Grocery, Adidas, Zara, Reebok, YOYOSO"
     },
     {
-      "id": "Quo eiusmod ad modi ",
-      "name": "In eius quas pariatu",
-      "password": "Pa$$w0rd!",
-      "email": "xafujevus@mailinator.com",
-      "gender": "male",
-      "role": "",
-      "isactive": false
+      "name": "Restaurant MS",
+      "features": "Inventory, KOT/BOT, Billing, Accounts, Reports, Loyalty",
+      "clients": "Trisara, KKFC, LOD, SkyPark, German Bakery, "
+    },
+    {
+      "name": "Payroll MS",
+      "features": "Daily Reports, Monthly Reports, Annual Reports",
+      "clients": "Geace, HONS, Prime, Prasuti Griha"
+    },
+    {
+      "name": "Parking MS",
+      "features": "Automated Ticketing, Memberships, Real Time Tracking",
+      "clients": "Labim Mall, Chhaya center, CG landmark"
+    },
+    {
+      "name": "Canteen MS",
+      "features": "Billing System, Stock MS, Staff MS, Analysis",
+      "clients": "KTM eats, Dhulikhel Hospital, "
+    },
+    {
+      "name": "Distribution MS",
+      "features": "Masters Setup, Traction and Report, Backup, Reports",
+      "clients": "Dabur, Surya, Tradener, Bharuwa"
     }
   ]
 }
