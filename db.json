@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": "Voluptatum asperiore",
+      "name": "Est dolorum dolore d",
+      "password": "Pa$$w0rd!",
+      "email": "dyvixosa@mailinator.com",
+      "gender": "male",
+      "role": "employee",
+      "isactive": true
+    },
+    {
+      "id": "rabin18",
+      "name": "Rabin Pokhrel",
+      "password": "Admin@123",
+      "email": "admin@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    }
+  ],
+  "roles": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "manager",
+      "name": "Manager"
+    },
+    {
+      "code": "employee",
+      "name": "Employee"
+    },
+    {
+      "id": "Quo eiusmod ad modi ",
+      "name": "In eius quas pariatu",
+      "password": "Pa$$w0rd!",
+      "email": "xafujevus@mailinator.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    }
+  ]
+}

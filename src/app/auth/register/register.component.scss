@@ -1,0 +1,91 @@
+button {
+  text-decoration: none;
+}
+.input-group-text{
+  padding: 0.7rem;
+}
+button.btn.btn-primary.btn-block{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.section-body{
+  .header{
+      margin-top: -1.52rem;
+  }
+  label{
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+  }
+  .cancel{
+      margin: 0 1rem;
+  }
+}
+
+
+
+
+section.form {
+	opacity: 1;
+	background-color: transparent;
+	padding: 20px;
+	text-align: center;
+  	color: #cacaca;
+}
+
+.center {
+	margin-right: auto;
+  	margin-left: auto;
+  	display: block;
+  	width: 400px;
+  	margin-top: 100px;
+  	margin-bottom: 60px;
+}
+
+input {
+	opacity: 0.3;
+	border-radius: 20px;
+	padding: 10px;
+	width: 80%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	box-shadow: none;
+	color: #fff;
+	border: none;
+	background-color: #5d5d5d;
+	transition: 1s;
+	border: 2px solid transparent;
+}
+
+input:focus, input:hover {
+	transition: 1s;
+	border: 2px solid #5d5d5d;
+	background-color: transparent;
+}
+
+.name-surname {
+	width: 36%;
+	display: inline;
+}
+
+button {
+	width: 86%;
+	border-radius: 20px;
+	background-color: #cacaca;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	box-shadow: none;
+	text-shadow: none;
+	border: none;
+	padding: 10px;
+	font-family: 'Abel', sans-serif;
+	transition: 1s;
+}
+
+button:hover {
+	background-color: #daa800;
+	transition: 1s;
+}

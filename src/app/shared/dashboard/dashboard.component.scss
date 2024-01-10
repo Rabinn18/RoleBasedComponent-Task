@@ -1,0 +1,28 @@
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+.mainInner{
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.mainInner div{
+  display:table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+#main_content{
+	display: -ms-flexbox;
+    // display:grid;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+	min-height: 100%;
+}

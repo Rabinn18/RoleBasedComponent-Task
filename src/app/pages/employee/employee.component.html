@@ -1,0 +1,63 @@
+<div class="section-body">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="header-action">
+        <h1 class="page-title">Employee</h1>
+        <div id="center" class="main center">
+          <table
+            class="table table-hover table-bordered table-vcenter text-nowrap table-striped mb-0"
+          >
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center">S.N.</th>
+                <th class="text-center">User ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Role</th>
+                <th class="text-center">IsActive</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of userList; index as i">
+                <td class="text-center">{{ size * PageNumber + i + 1 }}</td>
+                <td class="text-center">{{ data?.id }}</td>
+                <td class="text-center">
+                  {{ data?.name }}
+                </td>
+                <td class="text-center">{{ data?.email }}</td>
+                <td class="text-center">
+                  {{ data?.role === "" ? "Unassigned" : data?.role }}
+                </td>
+                <!-- <td class="text-center" *ngIf="data?.role == 'admin'">
+                  {{ data?.isactive ? "Active" : "Inactive" }}
+                </td> -->
+                <td class="text-center">
+                  <label class="switch" *ngIf="data?.role != 'admin'">
+                    <input
+                      type="checkbox"
+                      [checked]="data?.isactive"
+                      (click)="approveData(data)"
+                    />
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td class="text-center">
+                  <button
+                    type="button"
+                    *ngIf="data?.role != 'admin'"
+                    class="btn btn-primary btn-sm mr-1"
+                    (click)="openRolePopup(data)"
+                    title="Assign Role"
+                  >
+                    Assign Role
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
