@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,10 +17,12 @@ const MODULES = [
   BrowserAnimationsModule,
   CommonModule,
   RouterModule,
-  FormsModule,
-  ReactiveFormsModule,
   HttpClientModule,
-  ToastrModule,
+  ToastrModule.forRoot({
+    timeOut: 3000,
+    progressBar: true,
+  }),
+  ReactiveFormsModule,
 ];
 
 @NgModule({

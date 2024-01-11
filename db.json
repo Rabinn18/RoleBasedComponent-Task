@@ -28,13 +28,49 @@
       "isactive": true
     },
     {
-      "id": "demoManager",
-      "name": "Manage Name",
+      "id": "demoEmployee",
+      "name": "Employee Name",
       "password": "Pa$$w0rd!",
       "email": "employee@gmail.com",
       "gender": "male",
       "role": "employee",
       "isactive": true
+    },
+    {
+      "id": "kavymax",
+      "name": "fapot",
+      "password": "Pa$$w0rd!",
+      "email": "jykahy@mailinator.com",
+      "gender": "others",
+      "role": "employee",
+      "isactive": true
+    },
+    {
+      "id": "dutyqubog",
+      "name": "kafogogo",
+      "password": "Pa$$w0rd!",
+      "email": "witizuhin@mailinator.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "qasizemed",
+      "name": "pocug",
+      "password": "Pa$$w0rd!",
+      "email": "zowumu@mailinator.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "fyxykuxi",
+      "name": "sexote",
+      "password": "Pa$$w0rd!",
+      "email": "nume@mailinator.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
     }
   ],
   "roles": [
@@ -58,32 +94,38 @@
     {
       "name": "POS MS",
       "features": "Inventory, Billing, Accounting",
-      "clients": "Daily Grocery, Adidas, Zara, Reebok, YOYOSO"
+      "clients": "Daily Grocery, Adidas, Zara, Reebok, YOYOSO",
+      "id": "97b5"
     },
     {
       "name": "Restaurant MS",
       "features": "Inventory, KOT/BOT, Billing, Accounts, Reports, Loyalty",
-      "clients": "Trisara, KKFC, LOD, SkyPark, German Bakery, "
+      "clients": "Trisara, KKFC, LOD, SkyPark, German Bakery, ",
+      "id": "e7b3"
     },
     {
       "name": "Payroll MS",
       "features": "Daily Reports, Monthly Reports, Annual Reports",
-      "clients": "Geace, HONS, Prime, Prasuti Griha"
+      "clients": "Geace, HONS, Prime, Prasuti Griha",
+      "id": "47cc"
     },
     {
       "name": "Parking MS",
       "features": "Automated Ticketing, Memberships, Real Time Tracking",
-      "clients": "Labim Mall, Chhaya center, CG landmark"
+      "clients": "Labim Mall, Chhaya center, CG landmark",
+      "id": "3ea2"
     },
     {
       "name": "Canteen MS",
       "features": "Billing System, Stock MS, Staff MS, Analysis",
-      "clients": "KTM eats, Dhulikhel Hospital, "
+      "clients": "KTM eats, Dhulikhel Hospital, ",
+      "id": "532f"
     },
     {
       "name": "Distribution MS",
       "features": "Masters Setup, Traction and Report, Backup, Reports",
-      "clients": "Dabur, Surya, Tradener, Bharuwa"
+      "clients": "Dabur, Surya, Tradener, Bharuwa",
+      "id": "68ba"
     }
   ]
 }

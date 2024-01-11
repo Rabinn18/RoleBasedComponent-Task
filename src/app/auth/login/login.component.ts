@@ -28,16 +28,6 @@ export class LoginComponent {
   }
 
   onSubmitLogin(){
-    // if (this.loginForm.valid) {
-    //   this.service.getRegestered(this.loginForm.value).subscribe(result => {
-    //     console.log(this.loginForm.value)
-    //     this.toastr.success('Please contact admin for enable access.','Registered successfully')
-    //     this.router.navigate(['login'])
-    //   });
-    // } else {
-    //   this.toastr.warning('Please enter valid data.')
-    // }
-
     this.service.getbyCode(this.loginForm.value.id).subscribe(res => {
       this.userdata = res;
       // console.log(this.userdata);
@@ -45,12 +35,27 @@ export class LoginComponent {
         if(this.userdata.isactive){
           sessionStorage.setItem('id', this.userdata.id);
           sessionStorage.setItem('userrole', this.userdata.role);
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/pages/home']);
+          this.toastr.success('Logged in Successfully','Registered Success')
         }else{
           this.toastr.error('Please Contact Admin', "Inactive User")
         }
-      }else{
-        this.toastr.error('Invalid Credential')
+      }
+    },
+    (error) => {
+      if (error.status === 401) {
+        this.toastr.error(
+          "Email/Password doesn't match",
+          'Invalid Credentials'
+        );
+      } else if (error.status === 400) {
+        this.toastr.error('Please fill required fields', 'Error'
+        );
+      } else {
+        this.toastr.error(
+          'An error occured, please try agian later.',
+          'Error',
+        );
       }
     })
   }

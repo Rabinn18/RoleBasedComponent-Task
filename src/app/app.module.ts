@@ -14,9 +14,15 @@ const Modules = [
   BrowserModule,
   AppRoutingModule,
   BrowserAnimationsModule,
+  ToastrModule.forRoot({
+    timeOut: 3000,
+    positionClass: 'toast-top-right',
+    progressBar: true,
+  }),
   ReactiveFormsModule,
   HttpClientModule,
-  ToastrModule.forRoot()
+
+
 ]
 
 const AddModules = [

@@ -3,14 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { AuthGuard } from './guard/auth.guard';
-import { SideNavComponent } from './shared/side-nav/side-nav.component';
-// const routes: Routes = []
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    component: LoginComponent,
   },
   {
     path: 'pages',
