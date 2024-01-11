@@ -16,7 +16,7 @@ export class SideNavComponent implements DoCheck, OnInit{
   constructor(
     private service:AuthService,
   ){
-      console.log(this.loggedInRole)
+      // console.log(this.loggedInRole)
   }
   public home = [
     {

@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit{
   loadUser(){
     this.productService.getAllProducts().subscribe(res => {
       this.productList = res;
-      console.log(res)
+      // console.log(res)
     });
   }
 }
