@@ -75,11 +75,6 @@
   ],
   "roles": [
     {
-      "code": "admin",
-      "name": "Admin",
-      "id": "9dce"
-    },
-    {
       "code": "manager",
       "name": "Manager",
       "id": "c77d"
