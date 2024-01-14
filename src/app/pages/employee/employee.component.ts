@@ -26,7 +26,6 @@ export class EmployeeComponent {
       this.roleList = res;
     })
     this.loggedInUserRoleData = sessionStorage.getItem('role')
-    console.log(this.loggedInRole)
   }
   loadUser(){
     this.service.getAll().subscribe(res => {

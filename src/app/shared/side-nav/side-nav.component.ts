@@ -21,14 +21,14 @@ export class SideNavComponent implements DoCheck, OnInit{
   public home = [
     {
       title: 'Home',
-      icon: 'fa fa-dashboard',
+      icon: 'bi bi-house',
       link: '/pages/home',
     }
   ]
     public employee = [
     {
       title: 'Employee',
-      icon: 'fa fa-bullhorn',
+      icon: 'bi bi-people',
       link: '/pages/employee',
     },
   ]

@@ -30,7 +30,6 @@ export class LoginComponent {
   onSubmitLogin(){
     this.service.getbyCode(this.loginForm.value.id).subscribe(res => {
       this.userdata = res;
-      // console.log(this.userdata);
       if(this.userdata.password === this.loginForm.value.password){
         if(this.userdata.isactive){
           sessionStorage.setItem('id', this.userdata.id);
@@ -47,6 +46,9 @@ export class LoginComponent {
         this.toastr.error(
           "Email/Password doesn't match",
           'Invalid Credentials'
+        );
+      } else if (error.status === 404) {
+        this.toastr.error('Unable To Find Email/Password', 'Error'
         );
       } else if (error.status === 400) {
         this.toastr.error('Please fill required fields', 'Error'

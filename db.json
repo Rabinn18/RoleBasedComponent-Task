@@ -51,8 +51,8 @@
       "password": "Pa$$w0rd!",
       "email": "witizuhin@mailinator.com",
       "gender": "male",
-      "role": "",
-      "isactive": false
+      "role": "manager",
+      "isactive": true
     },
     {
       "id": "qasizemed",
@@ -61,7 +61,7 @@
       "email": "zowumu@mailinator.com",
       "gender": "male",
       "role": "",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "fyxykuxi",
@@ -69,6 +69,15 @@
       "password": "Pa$$w0rd!",
       "email": "nume@mailinator.com",
       "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "saciru",
+      "name": "cenaqyxixo",
+      "password": "Pa$$w0rd!",
+      "email": "gagomipuke@mailinator.com",
+      "gender": "others",
       "role": "",
       "isactive": false
     }

@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'pages',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     component: DashboardComponent,
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),

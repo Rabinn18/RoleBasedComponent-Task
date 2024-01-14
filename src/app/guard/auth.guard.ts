@@ -12,27 +12,20 @@ export class AuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
+    // state: RouterStateSnapshot
+  ): boolean {
+    const userRole = this.authService.getUserRole();
+    const isEmployeeRoute = route.url.length > 0 && route.url[0].path === 'employee';
     if (this.authService.isLoggedin()) {
-      if (route.url.length > 0) {
-        let menu = route.url[0].path;
-        if (menu == 'employee') {
-          if (this.authService.getUserRole() == 'admin') {
-            return true;
-          } else {
-            this.router.navigate(['']);
-              this.toastr.warning('You dont have access.')
-            return false;
-          }
-        }else{
-          return true;
-        }
-      } else {
+      if ( userRole != 'employee') {
         return true;
+      } else if (isEmployeeRoute) {
+        this.toastr.warning('You do not have access to this page');
+        this.router.navigate(['login']);
+        return false;
       }
-    }
-    else {
+      return true;
+    } else {
       this.router.navigate(['login']);
       return false;
     }

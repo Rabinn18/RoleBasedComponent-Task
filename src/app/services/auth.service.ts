@@ -26,11 +26,11 @@ export class AuthService {
   }
 
   isLoggedin(){
-    return sessionStorage.getItem('username')!=null;
+    return sessionStorage.getItem('id')!=null;
   }
 
   getUserName(){
-    return sessionStorage.getItem('username')!=null?sessionStorage.getItem('username')?.toString():'';
+    return sessionStorage.getItem('id')!=null?sessionStorage.getItem('id')?.toString():'';
   }
 
   getUserRole(){
