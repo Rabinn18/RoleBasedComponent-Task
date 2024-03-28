@@ -4,6 +4,7 @@ import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './guard/auth.guard';
+import { HeirarchicalDemoComponent } from './hierarchical/heirarchical-demo/heirarchical-demo.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
   },
+  // {
+  //   path: 'hierarchical-demo',
+  //   component: HeirarchicalDemoComponent,
+  // },
   {
     path: '**',
     redirectTo: '',

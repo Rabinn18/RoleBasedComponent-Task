@@ -7,7 +7,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements DoCheck{
-  title = 'imsTask';
+  // title = 'imsTask';
   public isadmin = false;
   constructor(private service:AuthService){
 

@@ -42,7 +42,7 @@
       "password": "Pa$$w0rd!",
       "email": "jykahy@mailinator.com",
       "gender": "others",
-      "role": "employee",
+      "role": "manager",
       "isactive": true
     },
     {
@@ -65,12 +65,12 @@
     },
     {
       "id": "fyxykuxi",
-      "name": "sexote",
+      "name": "seote",
       "password": "Pa$$w0rd!",
       "email": "nume@mailinator.com",
       "gender": "male",
       "role": "",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "saciru",

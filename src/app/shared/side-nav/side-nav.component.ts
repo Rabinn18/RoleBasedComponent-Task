@@ -32,6 +32,13 @@ export class SideNavComponent implements DoCheck, OnInit{
       link: '/pages/employee',
     },
   ]
+  public demoTree = [
+    {
+      title: 'Hierarchical',
+      // icon: 'bi bi-list-ul',
+      link: '/pages/hierarchical-demo',
+    },
+  ]
   ngDoCheck(): void {
     if(this.service.getUserRole()==='admin'){
       this.isadmin=true;
@@ -42,11 +49,11 @@ export class SideNavComponent implements DoCheck, OnInit{
   ngOnInit(): void{
     this.LoggedInUserName = sessionStorage.getItem('id')
     if(this.service.getUserRole()==='admin'){
-      this.menuItemsList.push(...this.home, ...this.employee)
+      this.menuItemsList.push(...this.home, ...this.employee, this.demoTree)
     }else if(this.service.getUserRole()==='manager'){
-      this.menuItemsList.push(...this.home, ...this.employee)
+      this.menuItemsList.push(...this.home, ...this.employee, this.demoTree)
     }else{
-      this.menuItemsList.push(...this.home)
+      this.menuItemsList.push(...this.home, this.demoTree)
     }
   }
 }

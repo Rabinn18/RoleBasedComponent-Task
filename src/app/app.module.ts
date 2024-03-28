@@ -9,6 +9,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { MatTreeModule } from '@angular/material/tree';
+import { TreeModule } from 'primeng/tree';
+import { TreeSelectModule } from 'primeng/treeselect';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const Modules = [
   BrowserModule,
@@ -21,8 +25,9 @@ const Modules = [
   }),
   ReactiveFormsModule,
   HttpClientModule,
-
-
+  MatTreeModule,
+  TreeModule,
+  TreeSelectModule
 ]
 
 const AddModules = [
@@ -36,7 +41,32 @@ const AddModules = [
     AppComponent
   ],
   imports: [ ...Modules, ...AddModules ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export interface TreeNode {
+  label: string;
+  children?: TreeNode[];
+}
+
+// Example data
+export const TREE_DATA: TreeNode[] = [
+  {
+    label: 'Node 1',
+    children: [
+      { label: 'Node 1.1' },
+      { label: 'Node 1.2' }
+    ]
+  },
+  {
+    label: 'Node 2',
+    children: [
+      { label: 'Node 2.1' },
+      { label: 'Node 2.2' }
+    ]
+  }
+];
+

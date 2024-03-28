@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { JSON_serverAPIs } from '../api.constants';
 import { Observable } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
